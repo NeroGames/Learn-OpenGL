@@ -1,7 +1,16 @@
 # depslib dependency file v1.0
-1603260955 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\main.cpp
+1603261919 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\main.cpp
 	<GL/glew.h>
 	<SFML/Window.hpp>
 	<SFML/OpenGL.hpp>
 	<iostream>
+
+1469324617 c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\library\gl\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<Availability.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
 
