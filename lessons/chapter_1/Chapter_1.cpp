@@ -1,61 +1,30 @@
-#include "Engine.h"
 #include "chapter_1/Chapter_1.h"
 
-int main()
+Chapter_1::Chapter_1()
 {
-    Engine engine;
-        engine.setScene(std::unique_ptr<Chapter_1>(new Chapter_1()));
-    engine.run();
-
-    return 0;
+    //ctor
 }
 
+Chapter_1::~Chapter_1()
+{
+    //dtor
+}
 
-
-
-
-
-/*#include <GL/glew.h>
-#include <SFML/Window.hpp>
-#include <SFML/OpenGL.hpp>
-
-#include <iostream>
-
-const char *vertexShaderSource = "#version 330 core\n"
+void Chapter_1::init()
+{
+    const char *vertexShaderSource = "#version 330 core\n"
     "layout (location = 0) in vec3 aPos;\n"
     "void main()\n"
     "{\n"
     "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
     "}\0";
-const char *fragmentShaderSource = "#version 330 core\n"
+
+    const char *fragmentShaderSource = "#version 330 core\n"
     "out vec4 FragColor;\n"
     "void main()\n"
     "{\n"
     "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
     "}\n\0";
-
-int main()
-{
-    // create the window
-    sf::ContextSettings settings;
-    settings.depthBits = 24;
-    settings.stencilBits = 8;
-    settings.antialiasingLevel = 4;
-    settings.majorVersion = 3;
-    settings.minorVersion = 3;
-    m_RenderWindow.create(sf::VideoMode(800, 600), "OpenGL", sf::Style::Default, settings);
-    window.setVerticalSyncEnabled(true);
-
-    // activate the window
-    window.setActive(true);
-
-    std::cout << glGetString(GL_VERSION);
-    //Initialize GLEW
-    glewExperimental = GL_TRUE;
-    if (glewInit() != GLEW_OK)
-    {
-        std::cout << "ERROR::GLEW --> Initialisation failed" << std::endl;
-    }
 
     // load resources, initialize the OpenGL states, ...
      // build and compile our shader program
@@ -85,7 +54,7 @@ int main()
         std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
     }
     // link shaders
-    int shaderProgram = glCreateProgram();
+    shaderProgram = glCreateProgram();
     glAttachShader(shaderProgram, vertexShader);
     glAttachShader(shaderProgram, fragmentShader);
     glLinkProgram(shaderProgram);
@@ -110,7 +79,7 @@ int main()
         0, 1, 3,  // first Triangle
         1, 2, 3   // second Triangle
     };
-    unsigned int VBO, VAO, EBO;
+
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
@@ -136,49 +105,22 @@ int main()
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
     glBindVertexArray(0);
 
-    // run the main loop
-    bool running = true;
-    while (running)
-    {
-        // handle events
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-            {
-                // end the program
-                running = false;
-            }
-            else if (event.type == sf::Event::Resized)
-            {
-                // adjust the viewport when the window is resized
-                glViewport(0, 0, event.size.width, event.size.height);
-            }
-        }
+}
 
-        // clear the buffers
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-        // draw...
-         // draw our first triangle
+void Chapter_1::render()
+{
+      // draw our first triangle
         glUseProgram(shaderProgram);
         glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
         //glDrawArrays(GL_TRIANGLES, 0, 6);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         // glBindVertexArray(0); // no need to unbind it every time
+}
 
-        // end the current frame (internally swaps the front and back buffers)
-        window.display();
-    }
-
-    // release resources...
-     // optional: de-allocate all resources once they've outlived their purpose:
-    // ------------------------------------------------------------------------
-    glDeleteVertexArrays(1, &VAO);
+void Chapter_1::destroy()
+{
+     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
     glDeleteBuffers(1, &EBO);
     glDeleteProgram(shaderProgram);
-
-
-    return 0;
-}*/
+}

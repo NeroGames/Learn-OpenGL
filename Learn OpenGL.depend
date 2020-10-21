@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1603261919 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\main.cpp
-	<GL/glew.h>
+1603304192 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\main.cpp
+	"Engine.h"
+	"chapter_1/Chapter_1.h"
 	<SFML/Window.hpp>
 	<SFML/OpenGL.hpp>
 	<iostream>
@@ -13,4 +14,29 @@
 	<Availability.h>
 	<OpenGL/glu.h>
 	<GL/glu.h>
+
+1603303394 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\engine\engine.cpp
+	"Engine.h"
+
+1603303370 c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\engine\engine.h
+	<GL/glew.h>
+	<SFML/Window.hpp>
+	<SFML/OpenGL.hpp>
+	"Scene.h"
+
+1603304360 c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\engine\scene.h
+	<GL/glew.h>
+	<SFML/OpenGL.hpp>
+	<SFML/Window/Event.hpp>
+	<iostream>
+	<memory>
+
+1603304329 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\engine\scene.cpp
+	"Scene.h"
+
+1603302884 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\lessons\chapter_1\chapter_1.cpp
+	"chapter_1/Chapter_1.h"
+
+1603304536 c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\lessons\chapter_1\chapter_1.h
+	"Scene.h"
 
