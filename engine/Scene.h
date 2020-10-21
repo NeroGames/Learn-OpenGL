@@ -23,6 +23,12 @@ class Scene
                                     Scene();
         virtual                    ~Scene();
 
+    protected:
+            //shader
+        //void                        createShader();
+        //void                        compileShader();
+        //void                        linkShader();
+
     public:
         virtual void                init();
         virtual void                clear();
