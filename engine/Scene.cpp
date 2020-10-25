@@ -56,5 +56,12 @@ sf::Vector2f Scene::getResolution()
     return m_Resolution;
 }
 
+sf::Vector2f Scene::pixelToNDC(const sf::Vector2f& vertex)
+{
+    return sf::Vector2f(-1.f + vertex.x/m_Resolution.x * 2.f,
+                         1.f - vertex.y/m_Resolution.y * 2.f);
+}
+
+
 
 

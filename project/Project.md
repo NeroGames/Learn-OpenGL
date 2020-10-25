@@ -9,8 +9,10 @@
 
 # Part 2 : Get started
 	
-## Chapter 1 : Draw a triangle & a Rectangle
-## Chapter 2 : 
+## Chapter 1 : Draw Simple 2D Shapes
+## Chapter 2 : Shaders and Textures
+## Chapter 3 : Draw 3d Shapes
+
 
 # Part 3 : Lighting
 

@@ -1,10 +1,7 @@
 # depslib dependency file v1.0
-1603643739 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\main.cpp
+1603664374 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\main.cpp
 	"Engine.h"
-	"chapter_1/Chapter_1.h"
-	<SFML/Window.hpp>
-	<SFML/OpenGL.hpp>
-	<iostream>
+	"chapter_2/ChapterTwo.h"
 
 1469324617 c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\library\gl\glew.h
 	<stddef.h>
@@ -24,14 +21,14 @@
 	<SFML/OpenGL.hpp>
 	"Scene.h"
 
-1603644035 c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\engine\scene.h
+1603647485 c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\engine\scene.h
 	<GL/glew.h>
 	<SFML/OpenGL.hpp>
 	<SFML/Window/Event.hpp>
 	<iostream>
 	<memory>
 
-1603644190 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\engine\scene.cpp
+1603647493 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\engine\scene.cpp
 	"Scene.h"
 
 1603643924 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\lessons\chapter_1\chapter_1.cpp
@@ -39,4 +36,23 @@
 
 1603304536 c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\lessons\chapter_1\chapter_1.h
 	"Scene.h"
+
+1603644966 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\lessons\chapter_1\chapterfirst.cpp
+	"chapter_1/ChapterFirst.h"
+
+1603644815 c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\lessons\chapter_1\chapterfirst.h
+	"Scene.h"
+
+1603664279 c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\lessons\chapter_1\chapterone.h
+	"Scene.h"
+
+1603660048 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\lessons\chapter_1\chapterone.cpp
+	"chapter_1/ChapterOne.h"
+
+1603666362 c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\lessons\chapter_2\chaptertwo.h
+	<SFML/System/Clock.hpp>
+	"Scene.h"
+
+1603666880 source:c:\users\sk-landry\desktop\nero-game-engine-r1.0.5\projects\learn opengl\lessons\chapter_2\chaptertwo.cpp
+	"chapter_2/ChapterTwo.h"
 

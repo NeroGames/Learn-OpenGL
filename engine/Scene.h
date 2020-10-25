@@ -31,6 +31,7 @@ class Scene
         //void                        compileShader();
         //void                        linkShader();
         void                        setSceneName(const std::string& name);
+        sf::Vector2f                pixelToNDC(const sf::Vector2f& vertex);
 
     public:
         virtual void                init();
