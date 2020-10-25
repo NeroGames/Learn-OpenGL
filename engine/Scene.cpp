@@ -40,3 +40,21 @@ void Scene::handleEvent(const sf::Event& event)
 {
 
 }
+
+void Scene::setSceneName(const std::string& name)
+{
+    m_SceneName = name;
+}
+
+std::string Scene::getSceneName()
+{
+    return m_SceneName;
+}
+
+sf::Vector2f Scene::getResolution()
+{
+    return m_Resolution;
+}
+
+
+

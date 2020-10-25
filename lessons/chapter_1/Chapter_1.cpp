@@ -3,6 +3,7 @@
 Chapter_1::Chapter_1()
 {
     //ctor
+    setSceneName("Chapter 1 - Draw Simple Shapes");
 }
 
 Chapter_1::~Chapter_1()

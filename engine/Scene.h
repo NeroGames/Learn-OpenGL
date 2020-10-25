@@ -22,12 +22,15 @@ class Scene
     public:
                                     Scene();
         virtual                    ~Scene();
+        std::string                 getSceneName();
+        sf::Vector2f                getResolution();
 
     protected:
             //shader
         //void                        createShader();
         //void                        compileShader();
         //void                        linkShader();
+        void                        setSceneName(const std::string& name);
 
     public:
         virtual void                init();
@@ -37,6 +40,9 @@ class Scene
         virtual void                handleEvent(const sf::Event& event);
 
     private:
+        friend class                Engine;
+        std::string                 m_SceneName;
+        sf::Vector2f                m_Resolution;
 
 };
 

@@ -16,7 +16,7 @@
 class Engine
 {
     public:
-                            Engine();
+                            Engine(const unsigned int& windowWidth = 1080, const unsigned int& windowHeight = 720);
         virtual            ~Engine();
         void                run();
         void                setScene(Scene::Ptr scene);
@@ -30,6 +30,7 @@ class Engine
         Scene::Ptr          m_Scene;
         bool                m_OpenGlAvailable;
         bool                m_EngineRunning;
+        sf::Vector2f        m_WindowResolution;
 
 };
 

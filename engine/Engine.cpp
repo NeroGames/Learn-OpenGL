@@ -6,9 +6,10 @@
 #include "Engine.h"
 ////////////////////////////////////////////////////////////
 
-Engine::Engine():
+Engine::Engine(const unsigned int& windowWidth, const unsigned int& windowHeight):
      m_OpenGlAvailable(true)
     ,m_EngineRunning(true)
+    ,m_WindowResolution(windowWidth, windowHeight)
 {
     createWindow();
     initOpenGL();
@@ -22,6 +23,8 @@ Engine::~Engine()
 void Engine::setScene(Scene::Ptr scene)
 {
     m_Scene = std::move(scene);
+    m_RenderWindow.setTitle(m_Scene->m_SceneName);
+    m_Scene->m_Resolution = m_WindowResolution;
 }
 
 void Engine::run()
@@ -73,7 +76,7 @@ void Engine::createWindow()
     settings.majorVersion = 3;
     settings.minorVersion = 3;
 
-    m_RenderWindow.create(sf::VideoMode(800, 600), "OpenGL", sf::Style::Default, settings);
+    m_RenderWindow.create(sf::VideoMode(m_WindowResolution.x, m_WindowResolution.y), "OpenGL", sf::Style::Default, settings);
     m_RenderWindow.setVerticalSyncEnabled(true);
 
     // activate the window

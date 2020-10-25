@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -31,10 +33,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="engine" />
+			<Add directory="lessons" />
 		</Compiler>
 		<Linker>
 			<Add option="-lglew32.dll" />
 		</Linker>
+		<Unit filename="engine/Engine.cpp" />
+		<Unit filename="engine/Engine.h" />
+		<Unit filename="engine/Scene.cpp" />
+		<Unit filename="engine/Scene.h" />
+		<Unit filename="lessons/chapter_1/Chapter_1.cpp" />
+		<Unit filename="lessons/chapter_1/Chapter_1.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
